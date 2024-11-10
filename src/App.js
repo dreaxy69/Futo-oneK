@@ -1,10 +1,15 @@
 import React from 'react';
 import './index.css';
 import { AcademicCapIcon, UserGroupIcon, HeartIcon } from '@heroicons/react/24/solid';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import AboutUs from './pages/AboutUs';
 
 export default function Component() {
   return (
-    <div className="bg-[#FCFCFC] min-h-screen">
+    <Router>
+      <Routes>
+        <Route path="/" element={
+        <div className="bg-[#FCFCFC] min-h-screen">
       <header className="bg-white sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-6 flex items-center justify-between">
           <div className="flex items-center space-x-4">
@@ -15,10 +20,9 @@ export default function Component() {
           </div>
           <nav className="hidden md:flex space-x-8">
             <a href="#" className="text-[#4ade80] font-semibold">Home</a>
-            <a href="#" className="text-gray-600 hover:text-[#4ade80]">About</a>
+            <Link to="/AboutUs" className="text-gray-600 hover:text-[#4ade80]">About</Link>
             <a href="#" className="text-gray-600 hover:text-[#4ade80]">Champaigns</a>
             <a href="#" className="text-gray-600 hover:text-[#4ade80]">Gallery</a>
-            <a href="#" className="text-gray-600 hover:text-[#4ade80]">News</a>
             <a href="#" className="text-gray-600 hover:text-[#4ade80]">Contact</a>
           </nav>
           <div className="flex items-center space-x-4">
@@ -48,9 +52,11 @@ export default function Component() {
                 <button className="px-6 py-3 bg-[#4ade80] hover:bg-[#FF5555] text-white rounded-md transition-colors">
                   Donate Now
                 </button>
+                <Link to="/AboutUs">
                 <button className="px-6 py-3 border border-[#4ade80] text-[#4ade80] rounded-md hover:bg-[#4ade80] hover:text-white transition-colors">
                   Know About Us
                 </button>
+                </Link>
               </div>
             </div>
             <div className="md:w-1/2">
@@ -192,7 +198,7 @@ export default function Component() {
               <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-400 hover:text-white">Home</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">About</a></li>
+                <li><Link to="/AboutUs" className="text-gray-400 hover:text-white">About</Link></li>
                 <li><a href="#" className="text-gray-400 hover:text-white">Champaigns</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white">Contact</a></li>
               </ul>
@@ -226,5 +232,12 @@ export default function Component() {
         </div>
       </footer>
     </div>
+     } />
+        
+     {/* Route for the About Us page */}
+     <Route path="/AboutUs" element={<AboutUs />} />
+      </Routes>
+    </Router>
+    
   )
 }
