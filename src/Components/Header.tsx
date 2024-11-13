@@ -1,16 +1,25 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLogin = () => {
+    navigate("/Login");
+  };
+
+  const handleSignup = () => {
+    navigate("/userRegister");
+  };
+
   return (
     <header className="bg-white sticky top-0 z-10 shadow-sm">
-      <div className="container mx-auto px-4 py-6 flex items-center justify-between">
+      <div className="container mx-auto px-2 py-6 flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center space-x-4">
           <svg
@@ -42,18 +51,27 @@ function Header() {
           <Link to="/Campaigns" className="text-gray-600 hover:text-[#4ade80]">
             Campaigns
           </Link>
+          <Link to="/Volunteer" className="text-gray-600 hover:text-[#4ade80]">
+            Volunteer
+          </Link>
           <Link to="/Gallery" className="text-gray-600 hover:text-[#4ade80]">
             Gallery
-          </Link>
-          <Link to="/Contact" className="text-gray-600 hover:text-[#4ade80]">
-            Contact
           </Link>
         </nav>
 
         {/* Desktop Action Items */}
         <div className="hidden md:flex items-center space-x-4">
-          <button className="px-4 py-2 border border-[#4ade80] text-[#4ade80] rounded-md hover:bg-[#4ade80] hover:text-white transition-colors">
-            Donate Now
+          <button
+            onClick={handleLogin}
+            className="px-4 py-2 border border-[#4ade80] text-[#4ade80] rounded-md hover:bg-[#4ade80] hover:text-white transition-colors"
+          >
+            Login
+          </button>
+          <button
+            onClick={handleSignup}
+            className="px-4 py-2 bg-[#4ade80] text-white rounded-md hover:bg-[#2ecc71] transition-colors"
+          >
+            Signup
           </button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -136,8 +154,17 @@ function Header() {
           >
             Contact
           </Link>
-          <button className="mt-4 w-full px-4 py-2 border border-[#4ade80] text-[#4ade80] rounded-md hover:bg-[#4ade80] hover:text-white transition-colors">
-            Donate Now
+          <button
+            onClick={handleLogin}
+            className="mt-4 w-full px-4 py-2 border border-[#4ade80] text-[#4ade80] rounded-md hover:bg-[#4ade80] hover:text-white transition-colors"
+          >
+            Login
+          </button>
+          <button
+            onClick={handleSignup}
+            className="mt-2 w-full px-4 py-2 bg-[#4ade80] text-white rounded-md hover:bg-[#2ecc71] transition-colors"
+          >
+            Signup
           </button>
           <div className="flex justify-center mt-4 pb-4">
             <svg
