@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Volunteer() {
   return (
     <div className="bg-gray-100  min-h-screen">
-        <Header/>
+
       <main className="mx-10 mt-6">
 
 
@@ -67,7 +67,7 @@ function Volunteer() {
           </div>
         </div>
       </main>
-      <Footer/>
+
     </div>
   );
 }
