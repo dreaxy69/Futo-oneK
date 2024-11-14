@@ -8,8 +8,8 @@ import Login from "./pages/Register/Login.tsx";
 import React from "react";
 import UserRegister from "./pages/Register/UserRegister.tsx";
 import UserUi from "./pages/UserPages/UserUi.tsx";
-import Volunteer from "./pages/UserPages/Volunteer.tsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { VolunteerUi } from "./pages/UserPages/VolunteerUI.tsx";
 
 export default function Component() {
   return (
@@ -21,8 +21,8 @@ export default function Component() {
       <Route path="/" element={<Home/>} />
       <Route path="/User" element={<UserUi/>} />
       <Route path="/Login" element={<Login/>} />
-      <Route path="/Volunteer" element={<Volunteer/>} />
-      <Route path="/userRegister" element={<UserRegister/>} />
+      <Route path="/Volunteer" element={<VolunteerUi/>} />
+      <Route path="/Login/userRegister" element={<UserRegister/>} />
       <Route path="/Campaigns" element={<Campaigns/>} />
       <Route path="/Contact" element={<Contact/>} />
       <Route path="/Gallery" element={<Gallery/>} />
