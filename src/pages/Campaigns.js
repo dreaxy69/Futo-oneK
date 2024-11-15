@@ -58,21 +58,21 @@ export default function Campaigns() {
       <header className="bg-white sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-6 flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#FF6D6D]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#4ade80]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
             </svg>
             <h1 className="text-2xl font-bold">Charity</h1>
           </div>
           <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-600 hover:text-[#FF6D6D]">Home</Link>
-            <Link to="/about" className="text-gray-600 hover:text-[#FF6D6D]">About</Link>
-            <Link to="/campaigns" className="text-[#FF6D6D] font-semibold">Campaigns</Link>
-            <a href="#" className="text-gray-600 hover:text-[#FF6D6D]">Gallery</a>
-            <a href="#" className="text-gray-600 hover:text-[#FF6D6D]">News</a>
-            <a href="#" className="text-gray-600 hover:text-[#FF6D6D]">Contact</a>
+            <Link to="/" className="text-gray-600 hover:text-[#4ade80]">Home</Link>
+            <Link to="/about" className="text-gray-600 hover:text-[#4ade80]">About</Link>
+            <Link to="/campaigns" className="text-[#4ade80] font-semibold">Campaigns</Link>
+            <a href="#" className="text-gray-600 hover:text-[#4ade80]">Gallery</a>
+            <a href="#" className="text-gray-600 hover:text-[#4ade80]">News</a>
+            <a href="#" className="text-gray-600 hover:text-[#4ade80]">Contact</a>
           </nav>
           <div className="flex items-center space-x-4">
-            <button className="hidden md:inline-flex px-4 py-2 border border-[#FF6D6D] text-[#FF6D6D] rounded-md hover:bg-[#FF6D6D] hover:text-white transition-colors">
+            <button className="hidden md:inline-flex px-4 py-2 border border-[#4ade80] text-[#4ade80] rounded-md hover:bg-[#4ade80] hover:text-white transition-colors">
               Donate Now
             </button>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -86,7 +86,7 @@ export default function Campaigns() {
       </header>
 
       <main>
-        <section className="bg-[#FF6D6D] text-white py-20">
+        <section className="bg-[#4ade80] text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Campaigns</h1>
             <p className="text-xl max-w-2xl mx-auto">Join us in making a difference. Support our ongoing campaigns and help us create positive change in communities around the world.</p>
@@ -105,16 +105,16 @@ export default function Campaigns() {
                     <div className="mb-4">
                       <div className="h-2 bg-gray-200 rounded-full">
                         <div
-                          className="h-2 bg-[#FF6D6D] rounded-full"
-                          style={{ width: `${(campaign.raised / campaign.goal) * 100}%` }}
+                          className="h-2 bg-[#4ade80] rounded-full"
+                          style={{ width: `₦{(campaign.raised / campaign.goal) * 100}%` }}
                         ></div>
                       </div>
                     </div>
                     <div className="flex justify-between text-sm text-gray-600 mb-4">
-                      <span>Raised: ${campaign.raised.toLocaleString()}</span>
-                      <span>Goal: ${campaign.goal.toLocaleString()}</span>
+                      <span>Raised: ₦{campaign.raised.toLocaleString()}</span>
+                      <span>Goal: ₦{campaign.goal.toLocaleString()}</span>
                     </div>
-                    <button className="w-full px-4 py-2 bg-[#FF6D6D] text-white rounded-md hover:bg-[#FF5555] transition-colors">
+                    <button className="w-full px-4 py-2 bg-[#4ade80] text-white rounded-md hover:bg-[#FF5555] transition-colors">
                       Donate Now
                     </button>
                   </div>
@@ -130,7 +130,7 @@ export default function Campaigns() {
             <p className="text-gray-600 max-w-2xl mx-auto mb-8">
               Have a cause you're passionate about? Start your own fundraising campaign and make a difference in your community.
             </p>
-            <button className="px-6 py-3 bg-[#FF6D6D] hover:bg-[#FF5555] text-white rounded-md transition-colors">
+            <button className="px-6 py-3 bg-[#4ade80] hover:bg-[#FF5555] text-white rounded-md transition-colors">
               Start a Campaign
             </button>
           </div>

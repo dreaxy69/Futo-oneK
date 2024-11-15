@@ -61,7 +61,7 @@ const UserRegister = () => {
         "Michael Okpara University of Agriculture"
     ].sort();
     const validatePassword = (password: string) => {
-        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@₦!%*?&])[A-Za-z\d@₦!%*?&]{8,}₦/;
         if (!passwordRegex.test(password)) {
             setPasswordError(
                 "Your password must have at least 8 characters, 1 uppercase letter, 1 lowercase letter, 1 number, and 1 symbol."
@@ -94,7 +94,7 @@ const UserRegister = () => {
                             {/* Profile Picture Upload */}
                             <div className="flex flex-col items-center mb-8">
                                 <div className="relative w-32 h-32 mb-4">
-                                    <div className={`w-full h-full rounded-full overflow-hidden border-4 border-gray-200 ${!imagePreview ? 'bg-gray-100' : ''}`}>
+                                    <div className={`w-full h-full rounded-full overflow-hidden border-4 border-gray-200 ₦{!imagePreview ? 'bg-gray-100' : ''}`}>
                                         {imagePreview ? (
                                             <img
                                                 src={imagePreview}
@@ -109,7 +109,7 @@ const UserRegister = () => {
                                     </div>
                                     <label
                                         htmlFor="profile-photo"
-                                        className="absolute bottom-0 right-0 bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full cursor-pointer shadow-lg transition-all duration-300"
+                                        className="absolute bottom-0 right-0 bg-[#4ade80] hover:bg-[#2ecc71] text-white p-2 rounded-full cursor-pointer shadow-lg transition-all duration-300"
                                     >
                                         <Camera className="w-5 h-5" />
                                     </label>
@@ -134,7 +134,7 @@ const UserRegister = () => {
                                     <input
                                         type="text"
                                         name="firstName"
-                                        placeholder="Firstname @Ernest"
+                                        placeholder="Firstname "
                                         value={formData.firstName}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
@@ -147,7 +147,7 @@ const UserRegister = () => {
                                     </label>
                                     <input
                                         type="text"
-                                        placeholder="Lastname @chike"
+                                        placeholder="Lastname"
                                         name="lastName"
                                         value={formData.lastName}
                                         onChange={handleChange}
@@ -180,7 +180,7 @@ const UserRegister = () => {
                                     <input
                                         type="tel"
                                         name="phoneNumber"
-                                        placeholder="Number @+234 or 070"
+                                        placeholder="Number"
                                         value={formData.phoneNumber}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
@@ -218,11 +218,11 @@ const UserRegister = () => {
                                         <div className="relative">
                                             <input
                                                 type="password"
-                                                placeholder="Password @EzeDarling1."
+                                                placeholder="Password"
                                                 name="password"
                                                 value={formData.password}
                                                 onChange={handleChange}
-                                                className={`w-full px-4 py-3 rounded-lg border transition-all duration-300 ${passwordError
+                                                className={`w-full px-4 py-3 rounded-lg border transition-all duration-300 ₦{passwordError
                                                         ? "border-red-500 focus:ring-2 focus:ring-red-500 focus:border-red-500"
                                                         : "border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                                     }`}
@@ -254,7 +254,7 @@ const UserRegister = () => {
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg shadow hover:shadow-lg transition-all duration-300 mt-8"
+                                className="w-full bg-[#4ade80] hover:bg-[#2ecc71] text-white font-semibold py-3 rounded-lg shadow hover:shadow-lg transition-all duration-300 mt-8"
                             >
                                 Create Account
                             </button>
@@ -262,11 +262,11 @@ const UserRegister = () => {
                         {/* Terms and privacy */}
                         <p className="text-gray-600 text-sm">
                             By clicking the Sign up button below, you agree to the
-                            <a href="#" className="text-blue-500 hover:underline">
+                            <a href="#" className="text-[#4ade80] hover:underline">
                                 Terms of service
                             </a>{" "}
                             and acknowledge the{" "}
-                            <a href="#" className="text-blue-500 hover:underline">
+                            <a href="#" className="text-[#4ade80] hover:underline">
                                 Privacy notice
                             </a>
                         </p>

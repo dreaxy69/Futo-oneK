@@ -88,6 +88,7 @@ const Header = () => {
               onClick={(e) => {
                 e.preventDefault();
                 handleNavigation(path);
+                console.log(`Navigate to: ${path}`);
               }}
               className={`${
                 isActive(path)
@@ -101,18 +102,6 @@ const Header = () => {
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
-          <button
-            onClick={() => handleNavigation("/login")}
-            className="px-4 py-2 border border-[#4ade80] text-[#4ade80] rounded-md hover:bg-[#4ade80] hover:text-white transition-colors"
-          >
-            Login
-          </button>
-          <button
-            onClick={() => handleNavigation("/SignUp")}
-            className="px-4 py-2 bg-[#4ade80] text-white rounded-md hover:bg-[#2ecc71] transition-colors"
-          >
-            Signup
-          </button>
           <button
             onClick={toggleSearch}
             className="text-gray-600 hover:text-[#4ade80]"

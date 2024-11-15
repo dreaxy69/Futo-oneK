@@ -5,11 +5,14 @@ import AboutUs from "./pages/AboutUs.tsx";
 import Campaigns  from "./pages/Campaigns.tsx";
 import Home from "./pages/Home.tsx";
 import Login from "./pages/Register/Login.tsx";
+import SignUp from "./pages/Register/SignUp.tsx";
 import React from "react";
 import UserRegister from "./pages/Register/UserRegister.tsx";
 import UserUi from "./pages/UserPages/UserUi.tsx";
-import Volunteer from "./pages/UserPages/Volunteer.tsx";
+import AdminDashboard from "./Admin/AdminDashboard.tsx";
+import AdminLogin from "./Admin/AdminLogin.tsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { VolunteerUi } from "./pages/UserPages/VolunteerUI.tsx";
 
 export default function Component() {
   return (
@@ -21,12 +24,15 @@ export default function Component() {
       <Route path="/" element={<Home/>} />
       <Route path="/User" element={<UserUi/>} />
       <Route path="/Login" element={<Login/>} />
-      <Route path="/Volunteer" element={<Volunteer/>} />
-      <Route path="/userRegister" element={<UserRegister/>} />
+      <Route path="/SignUp" element={<SignUp/>} />
+      <Route path="/Volunteer" element={<VolunteerUi/>} />
+      <Route path="/Login/userRegister" element={<UserRegister/>} />
       <Route path="/Campaigns" element={<Campaigns/>} />
       <Route path="/Contact" element={<Contact/>} />
       <Route path="/Gallery" element={<Gallery/>} />
       <Route path="/AboutUs" element={<AboutUs />} />
+      <Route path="/AdminDashboard" element={<AdminDashboard />} />
+      <Route path="/AdminLogin" element={<AdminLogin />} />
       </Routes>
     </Router>
 
