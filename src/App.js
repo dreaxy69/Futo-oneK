@@ -24,7 +24,9 @@ export default function Component() {
       <Route path="/" element={<Home/>} />
       <Route path="/User" element={<UserUi/>} />
       <Route path="/Login" element={<Login/>} />
+
       <Route path="/SignUp" element={<SignUp/>} />
+
       <Route path="/Volunteer" element={<VolunteerUi/>} />
       <Route path="/Login/userRegister" element={<UserRegister/>} />
       <Route path="/Campaigns" element={<Campaigns/>} />
